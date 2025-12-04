@@ -5,6 +5,9 @@ import PortfolioSection from './components/PortfolioSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
 import FooterSection from './components/FooterSection.vue'
+
+const base = import.meta.env.BASE_URL
+const totoroImage = `${base}totoro.gif`
 </script>
 
 <template>
@@ -18,7 +21,7 @@ import FooterSection from './components/FooterSection.vue'
     
     <!-- Floating Totoro -->
     <div class="floating-totoro">
-      <img src="/totoro.gif" alt="Totoro" />
+      <img :src="totoroImage" alt="Totoro" />
     </div>
   </main>
 </template>

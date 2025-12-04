@@ -1,6 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+const base = import.meta.env.BASE_URL
+
 const isVisible = ref(false)
 const sectionRef = ref(null)
 
@@ -16,7 +18,7 @@ const projects = [
       'Ensured secure, scalable data management compliant with healthcare standards'
     ],
     tags: ['React.js', 'Node.js', 'Express', 'MongoDB'],
-    image: '/mbq.JPG',
+    image: `${base}mbq.JPG`,
     link: 'https://www.mbqproject.com/',
     hasLink: true,
     note: 'To explore the full CRM system, you\'ll need to join the MBQ Project. But feel free to check it out and see how we\'re helping track and improve children\'s movement behaviour!'
@@ -32,7 +34,7 @@ const projects = [
       'Designed intuitive forms for BDMs to rapidly submit and track applications'
     ],
     tags: ['Laravel', 'Vue.js', 'Vuetify', 'MySQL', 'Blade'],
-    image: '/crm.jpg',
+    image: `${base}crm.jpg`,
     link: 'https://vehiclesolutions.com.au/',
     hasLink: true,
     linkText: 'Visit Calculator',
@@ -49,7 +51,7 @@ const projects = [
       'Live price tracking and comparison across multiple retailers'
     ],
     tags: ['Vue.js', '.NET', 'REST APIs', 'Web Scraping'],
-    image: '/grocery.jpg',
+    image: `${base}grocery.jpg`,
     link: null,
     hasLink: false,
     note: 'Ongoing side project — actively in development.'

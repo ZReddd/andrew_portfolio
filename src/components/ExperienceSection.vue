@@ -1,6 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+const base = import.meta.env.BASE_URL
+
 const isVisible = ref(false)
 const sectionRef = ref(null)
 
@@ -88,7 +90,7 @@ onMounted(() => {
         <div class="edu-label">Education</div>
         <div class="edu-content">
           <div class="edu-header">
-            <img src="/uq-logo.png" alt="UQ" class="edu-logo" />
+            <img :src="`${base}uq-logo.png`" alt="UQ" class="edu-logo" />
             <div class="edu-info">
               <span class="edu-degree">Master of Computer Science</span>
               <span class="edu-school">The University of Queensland, 2022 — 2024</span>

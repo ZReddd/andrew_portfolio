@@ -1,11 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+const base = import.meta.env.BASE_URL
+
 const isLoaded = ref(false)
 const imageLoaded = ref(false)
 
 // Background image path - place your image at public/background.jpg
-const backgroundImage = '/background.jpg'
+const backgroundImage = `${base}background.jpg`
+const logoImage = `${base}logo.gif`
 
 onMounted(() => {
   // Check if image exists
@@ -36,7 +39,7 @@ onMounted(() => {
     <nav class="nav" :class="{ 'is-visible': isLoaded }">
       <div class="nav-content">
         <a href="#" class="nav-logo">
-          <img src="/logo.gif" alt="Logo" class="nav-logo-img" />
+          <img :src="logoImage" alt="Logo" class="nav-logo-img" />
         </a>
         <div class="nav-links">
           <a href="#experience">Experience</a>

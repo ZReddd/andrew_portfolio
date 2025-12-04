@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+const base = import.meta.env.BASE_URL
+const profileImage = `${base}profile.jpg`
+
 const isVisible = ref(false)
 const sectionRef = ref(null)
 
@@ -37,7 +40,7 @@ onMounted(() => {
       <div class="about-content">
         <div class="about-image-wrapper" :class="{ 'is-visible': isVisible }">
           <div class="about-image">
-            <img src="/profile.jpg" alt="Andrew Cheng" />
+            <img :src="profileImage" alt="Andrew Cheng" />
           </div>
           <div class="image-decoration"></div>
         </div>
